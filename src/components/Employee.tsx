@@ -61,7 +61,7 @@ function Employee() {
 
 
     return (
-        <div className='bg-[#0D1821]'>
+        <div className='bg-[#e6e600]'>
             <div className='w-full h-max mt-6'>
                 <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
             </div>
