@@ -3,7 +3,7 @@ import List from './List';
 
 function Card({ data }: any) {
   return (
-    <div className="w-80 h-96 m-4 rounded-lg p-8 text-black" style={{ backgroundColor: '#0E8388' }}>
+    <div className="w-80 h-70 m-4 rounded-lg p-8 text-black" style={{ backgroundColor: '#0E8388' }}>
 
       <div className="h-24 flex items-center">
         <div className="ml-4 flex flex-col text-left">
