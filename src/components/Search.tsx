@@ -26,12 +26,15 @@ function Search({
 
   const handleSelectSkill = (skill: string) => {
     const isSkillSelected = selectedSkills.includes(skill);
+    let updatedSelectedSkills: string[];
 
     if (isSkillSelected) {
-      handleSkillSelection(selectedSkills.filter((selectedSkill) => selectedSkill !== skill));
+      updatedSelectedSkills = selectedSkills.filter((selectedSkill) => selectedSkill !== skill);
     } else {
-      handleSkillSelection([...selectedSkills, skill]);
+      updatedSelectedSkills = [...selectedSkills, skill];
     }
+
+    handleSkillSelection(updatedSelectedSkills);
   };
 
   return (
@@ -46,12 +49,12 @@ function Search({
 
       <div className="mt-4">
         <h2 className="text-lg font-medium">Skills:</h2>
-        <div className="flex flex-wrap mt-2 justify-center"> {/* Added 'justify-center' class */}
+        <div className="flex flex-wrap mt-2 justify-center">
           {skills.map((skill) => (
             <button
               key={skill}
-              className={`bg-[#2C3333] text-[#FFFFFF] px-3 py-2 rounded-full mr-2 mb-2 ${
-                selectedSkills.includes(skill) ? 'bg-blue-500 text-white' : 'bg-[#CBE4DE] text-gray-800'
+              className={`bg-white text-[#000000] px-3 py-2 rounded-full mr-2 mb-2 ${
+                selectedSkills.includes(skill) ? 'bg-black-500 text-black' : 'bg-blue-300 text-black-800'
               }`}
               onClick={() => handleSelectSkill(skill)}
             >
@@ -65,3 +68,5 @@ function Search({
 }
 
 export default Search;
+
+
