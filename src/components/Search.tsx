@@ -53,8 +53,8 @@ function Search({
           {skills.map((skill) => (
             <button
               key={skill}
-              className={`bg-white text-[#000000] px-3 py-2 rounded-full mr-2 mb-2 ${
-                selectedSkills.includes(skill) ? 'bg-black-500 text-black' : 'bg-blue-300 text-black-800'
+              className={`bg-[#2C3333] text-[#FFFFFF] px-3 py-2 rounded-full mr-2 mb-2 ${
+                selectedSkills.includes(skill) ? 'bg-white-500 text-black' : 'bg-blue-300 text-black-800'
               }`}
               onClick={() => handleSelectSkill(skill)}
             >
